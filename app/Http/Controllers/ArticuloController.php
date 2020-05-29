@@ -10,7 +10,7 @@ use sisVentas\Http\Requests\ArticuloFormRequest;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use sisVentas\Articulo;
-use DB;
+use \DB;
 
 
 class ArticuloController extends Controller
@@ -25,8 +25,9 @@ class ArticuloController extends Controller
             ->JOIN('categoria as c','a.idcategoria','=','c.idcategoria')
             ->SELECT('a.idarticulo','a.nombre','a.codigo','a.stock','c.nombre as categoria', 'a.descripcion', 'a.imagen', 'a.estado')
             ->WHERE('a.nombre','LIKE','%'.$query.'%')
+            ->WHERE('estado','=','Activo')
             ->ORWHERE('a.codigo','LIKE','%'.$query.'%')
-            /*('estado','=','Activo')*/
+            ->WHERE('estado','=','Activo')
             ->ORDERBY('a.idarticulo','desc')
             ->PAGINATE(7);
             return view('almacen.articulo.index',["articulos"=>$articulos,"searchText"=>$query]);
