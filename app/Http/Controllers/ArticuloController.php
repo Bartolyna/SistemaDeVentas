@@ -10,7 +10,7 @@ use sisVentas\Http\Requests\ArticuloFormRequest;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use sisVentas\Articulo;
-use \DB;
+use Illuminate\Support\Facades\DB;
 
 
 class ArticuloController extends Controller
@@ -61,7 +61,7 @@ class ArticuloController extends Controller
     }
     public function show($id){
 
-        return view("almacen.articulo.show", ["articulo"->Articulo::findOrFail($id)]);
+        return view("almacen.articulo.show", ["articulo"=>Articulo::findOrFail($id)]);
 
     }
     public function edit($id){

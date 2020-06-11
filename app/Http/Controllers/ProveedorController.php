@@ -8,7 +8,7 @@ use sisVentas\Http\Requests;
 use sisVentas\Persona;
 use Illuminate\Support\Facades\Redirect;
 use sisVentas\Http\Requests\PersonaFormRequest;
-use \DB;
+use Illuminate\Support\Facades\DB;
 
 class ProveedorController extends Controller
 {
