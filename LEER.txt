@@ -1,0 +1,8 @@
+Para este proyecto se tilizo Laravel 5.2.31(Es necesario intalarlo para que sirva)
+
+Para iniciar el proyecto ejecutar - php artinsan serve
+
+Usuario: carlosandres19982009@hotmail.com
+Contraseña:   carlos
+
+Link del proyecto: https://www.youtube.com/watch?v=Zj0pshSSlEo&list=PLZPrWDz1MolrxS1uw-u7PrnK66DCFmhDR&index=1
